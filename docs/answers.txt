@@ -1,0 +1,85 @@
+(a) Paste the console output you saved at the end of step 3.C (2 points)
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 971 bytes | 971.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:kozuk0619/Assignment1.git
+    f7a5d56..dd36997  master -> master
+	
+(b) How many commits have been done to the repository (not only by you, but by anyone) so far? Write the git command you used to get this information (4 points)
+There has been 10 commits, which was obtained by using the 'git shortlog' command. See out put below.
+
+$ Logans-MacBook-Pro:docs Logan$ git shortlog
+Ephyras (1):
+      Initial commit
+
+Javier (6):
+      Role game for Git Assignment.
+      Merge origin/master
+      Git ignore was changed. Some local files should not be included in the remote.
+      Status.txt file was added
+      Adding BasicWeapon to support attribute reuse.
+      General Refactoring Added a new weapon (Spear) for further reference
+
+Logan Anderson (3):
+      Updated information files
+      Update status.txt.
+      Additions of answers.txt to the docs directory.
+
+(c) When was the .gitignore file modified last? Write the git command you used
+to get this information (4 points)
+The last time .gitignore was last modified was September 15 2016. This was found using the git command 'git log ../.gitignore'. See output below.
+
+$ Logans-MacBook-Pro:docs Logan$ git log ../.gitignore
+commit 2f6863fcae58352d7fa1674ae373bbc9e6cbedf1
+Author: Javier <Javier@RicardoLaptop>
+Date:   Thu Sep 15 10:29:34 2016 -0400
+
+    Git ignore was changed. Some local files should not be included in the
+    remote.
+
+commit 871bf6a4d6a7f525aeca876e2ab445390633c130
+Author: Javier <Javier@RicardoLaptop>
+Date:   Thu Sep 15 10:27:32 2016 -0400
+
+    Role game for Git Assignment.
+
+    This framework inclused the interdace Sword, the RoleGame class with
+    a partial implementation of the game, and one weapon: Sword.
+
+(d) Mention two reasons why branches are used in a Git repository (4 points)
+One reason is to allow for development to occur without any affect to the branch before it, i.e. you can make a lot of mistakes but it has no affect on the software.
+The second reason is that if you mess up really badly and completely break the software, then you can role back to the previous branch and start over.
+
+(e) What is the difference between git log and git status? (4 points)
+Running 'git log' will show you all of the commit logs, while when you run 'git status' it only show the working tree status.
+
+(f) What command would you use to see the commits where “Weapon.java” was one of the committed files? (4 points)
+I would use the command 'git log src/edu/fsu/cs/cen5035/Weapon.java'. See output below.
+
+Logans-MacBook-Pro:docs Logan$ git log src/edu/fsu/cs/cen5035/Weapon.java
+commit 871bf6a4d6a7f525aeca876e2ab445390633c130
+Author: Javier <Javier@RicardoLaptop>
+Date:   Thu Sep 15 10:27:32 2016 -0400
+
+    Role game for Git Assignment.
+
+    This framework inclused the interdace Sword, the RoleGame class with
+    a partial implementation of the game, and one weapon: Sword.
+
+(g) What command would you use to see the commits whose commit message contains the word “file”? (4 points)
+I would use the command 'git log --grep="file"'.
+
+(h) In the context of object-oriented programming (I) What is inheritance? (II) What is polymorphism? (III) What is encapsulation? (6 points)
+(I) Inheritance allows for classes to take on, or inherit, properties of an existing class. The classes that get inherited from are are refered to as 'parent' classes.
+(II) Polymorphism is the ability to have the same interface for different types or forms of data.
+(III) Encapsulation is when data and functions are combined into a unit called a class, and when using the class the data is not accessed directly but through the functions that are presented as public.
+
+(i) What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration management” workflow”? (5 points)
+Dictator and Lieutenants workflow is generally used by larger progects and have several integration managers that are in charge of certain parts of the repository. Those lieutenants answer to a single integration manager refered to as the dictator.
+Integration management is when you send your changes for a repository to a manager and he test and decides whether or not the merge your changes to the repo.
+
+(j) Why a team of 100 developers would benefit more by following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
+The Centralized workflow uses a single point of entry for all changes to the project. With a large group, such as 100 developers, having only a single access point for changes would be a disaster. Having several access points, which would be provided by the Dictator and Lieutenants.
