@@ -79,7 +79,15 @@ I would use the command 'git log --grep="file"'.
 
 (i) What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration management” workflow”? (5 points)
 Dictator and Lieutenants workflow is generally used by larger progects and have several integration managers that are in charge of certain parts of the repository. Those lieutenants answer to a single integration manager refered to as the dictator.
-Integration management is when you send your changes for a repository to a manager and he test and decides whether or not the merge your changes to the repo.
+Integration management is when you send your changes for a repository to a single manager and he tests and decides whether or not the merge your changes to the repo. 
 
 (j) Why a team of 100 developers would benefit more by following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
 The Centralized workflow uses a single point of entry for all changes to the project. With a large group, such as 100 developers, having only a single access point for changes would be a disaster. Having several access points, which would be provided by the Dictator and Lieutenants.
+
+(5) Is the RoleGame prototype using polymorphism and/or encapsulation? If you find that the prototype is using any of these two OOP principles, please discuss in which way the prototype is using it.
+The RoleGame prototype uses both polymorphism and encapsulation. 
+Polymorphism can be seen because all of the different weapons are able to be stored in a variable of type Weapon. 
+Therefore the weapons will implement the same interface as the parent class Weapon and are of type Weapon.
+
+Encapsulation can be seen because the DAMAGE variable in each weapon can only be accesed by using a function, int hit() and int hit(int armor).
+Encapsulation allows for hiding the internal components of a object and in this case, the DAMAGE variabe is that hidden component.
